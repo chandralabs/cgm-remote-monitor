@@ -1,0 +1,22 @@
+version: 0.1
+os: linux
+files:
+    - source: /
+      destination: /srv/cgm-remote-monitor
+hooks:
+    # BeforeInstall:
+    #     - location: scripts/install_dependencies.sh
+    #       timeout: 300
+    #       runas: root
+    AfterInstall:
+        - location: /opt/codedeploy-agent/scripts/after_install.sh
+          timeout: 3000
+          runas: root
+    ApplicationStart:
+        - location: /opt/codedeploy-agent/scripts/app_start.sh
+          timeout: 300
+          runas: root
+    ApplicationStop:
+        - location: /opt/codedeploy-agent/scripts/stop_server.sh
+          timeout: 300
+          runas: root
