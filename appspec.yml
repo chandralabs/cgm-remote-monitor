@@ -11,10 +11,10 @@ hooks:
           timeout: 3000
           runas: root
     ApplicationStart:
-        - location: ../../../../codedeploy-agent/scripts/app_start.sh
+        - location: ../../../../scripts/app_start.sh
           timeout: 300
           runas: root
     ApplicationStop:
-        - location: ../../../../codedeploy-agent/scripts/app_stop.sh
+        - location: ../../../../scripts/app_stop.sh
           timeout: 300
           runas: root
