@@ -15,6 +15,6 @@ hooks:
           timeout: 300
           runas: root
     ApplicationStop:
-        - location: ../../../codedeploy-agent/scripts/stop_server.sh
+        - location: /opt/codedeploy-agent/scripts/app_server.sh
           timeout: 300
           runas: root
